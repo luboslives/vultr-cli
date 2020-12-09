@@ -10,7 +10,6 @@ Usage:
 
 Available Commands:
   account        Retrieve information about your account
-  api-key        retrieve information about the current API key
   apps           Display all available applications
   backups        display all available backups
   bare-metal     bare-metal is used to access bare metal server commands
@@ -18,6 +17,7 @@ Available Commands:
   dns            dns is used to access dns commands
   firewall       firewall is used to access firewall commands
   help           Help about any command
+  instance       commands to interact with instances on vultr
   iso            iso is used to access iso commands
   load-balancer  load balancer commands
   network        network interacts with network actions
@@ -27,7 +27,6 @@ Available Commands:
   regions        get regions
   reserved-ip    reserved-ip lets you interact with reserved-ip
   script         startup script commands
-  instance       commands to interact with instances on vultr
   snapshot       snapshot commands
   ssh-key        ssh-key commands
   user           user commands
@@ -102,10 +101,10 @@ In order to use `vultr-cli` you will need to export your [Vultr API KEY](https:/
 `vultr-cli` can interact with all of your Vultr resources. Here are some basic examples to get you started:
 
 ##### List all available servers
-`vultr-cli server list`
+`vultr-cli instance list`
 
 ##### Create a server
-`vultr-cli server create --region <region-id> --plan <plan-id> --os <os-id> --hostname <hostname>` 
+`vultr-cli instance create --region <region-id> --plan <plan-id> --os <os-id> --hostname <hostname>` 
 
 ##### Create a DNS Domain
 `vultr-cli dns domain create --domain <domain-name> --ip <ip-address>`
